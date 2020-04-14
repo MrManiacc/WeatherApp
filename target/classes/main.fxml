@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.jraynor.control.Controller">
+   <children>
+      <AnchorPane fx:id="titleBar" prefHeight="60.0" prefWidth="720.0" style="-fx-background-color: #1abc9c;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="searchBar" layoutX="27.0" layoutY="10.0" onKeyTyped="#searchBarTyped" prefHeight="40.0" prefWidth="434.0" promptText="enter a city name...." style="-fx-background-radius: 0; -fx-background-color: #2980b9#2980b9;" AnchorPane.leftAnchor="27.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="clearButton" layoutX="496.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearButtonAction" onMouseEntered="#clearButtonEnter" onMouseExited="#clearButtonExit" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 0; -fx-background-color: #95a5a6#95a5a6;" text="clear" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="contentPane" prefHeight="170.0" prefWidth="720.0" spacing="30.0" style="-fx-background-color: #7f8c8d #7f8c8d;" AnchorPane.topAnchor="60.0">
+         <children>
+            <Pane fx:id="firstDayPane" maxHeight="140.0" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: #27ae60;">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-1.0" layoutY="75.0" prefHeight="60.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="firstDayTemp" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutY="-1.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 0 0 2 0;">
+                     <children>
+                        <Label fx:id="firstDayLabel" text="Today" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutY="30.0" prefHeight="50.0" prefWidth="100.0">
+                     <children>
+                        <Label text="High:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="firstHighLabel" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="100.0" layoutY="30.0" prefHeight="50.0" prefWidth="100.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label text="Low:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="firstLowLabel" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane fx:id="secondDayPane" maxHeight="100.0" minHeight="60.0" prefHeight="86.0" prefWidth="200.0" style="-fx-background-color: #e67e22;">
+               <children>
+                  <HBox alignment="CENTER" layoutY="-1.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 0 0 2 0;">
+                     <children>
+                        <Label fx:id="secondDayLabel" text="Tuesday" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutY="30.0" prefHeight="50.0" prefWidth="101.0">
+                     <children>
+                        <Label text="High:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="secondHighLabel" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="100.0" layoutY="30.0" prefHeight="50.0" prefWidth="101.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label text="Low:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="secondLowLabel" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane fx:id="thirdDayPane" maxHeight="100.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #2980b9;">
+               <children>
+                  <HBox alignment="CENTER" layoutY="-1.0" prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 0 0 2 0;">
+                     <children>
+                        <Label fx:id="thirdDayLabel" text="unknown" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutY="30.0" prefHeight="50.0" prefWidth="101.0">
+                     <children>
+                        <Label text="High:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="thirdHighLabel" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="100.0" layoutY="30.0" prefHeight="50.0" prefWidth="101.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label text="Low:" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="thirdLowLabel" text="0" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Pane>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" />
+         </padding>
+      </HBox>
+      <ListView fx:id="locationList" layoutX="27.0" layoutY="50.0" onMouseClicked="#locationClicked" prefHeight="26.0" prefWidth="434.0" />
+   </children>
+</AnchorPane>
